@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.scriptvenv/
+venv/
+env/
+.env
+
+# PLY Generated Files
+parser.out
+parsetab.py
+
+# Output Files
+output.mid
+output.wav
+output.mp3
+ir.json
+
+# React / Node
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.env
+
+# OS Files
+.DS_Store
+Thumbs.db

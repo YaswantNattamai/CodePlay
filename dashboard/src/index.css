@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap');
+
+:root {
+  --bg-dark: #0f111a;
+  --bg-panel: rgba(25, 28, 41, 0.7);
+  --bg-track: rgba(30, 34, 51, 0.8);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  --c-ep: #a855f7;
+  --c-bass: #ef4444;
+  --c-drums: #f59e0b;
+  --c-lead: #10b981;
+  --c-pad: #3b82f6;
+  --c-strings: #ec4899;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(168, 85, 247, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.15), transparent 25%);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: rgba(15, 17, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ec4899, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.keyboard {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.key-btn {
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 3px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.key-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-bottom-color: #ec4899;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.key-btn:active {
+  transform: scale(0.95) translateY(2px);
+  border-bottom-width: 1px;
+}
+
+.app-container {
+  display: flex;
+  height: calc(100vh - 75px);
+  padding: 1.5rem;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+.left-pane {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.editor-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.editor-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.compile-btn {
+  background: linear-gradient(135deg, #a855f7, #3b82f6);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.compile-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+  transform: translateY(-1px);
+}
+
+.compile-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.code-editor {
+  flex: 1;
+  background: transparent;
+  color: #e2e8f0;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 1.5rem;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.right-pane {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.player-card {
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+
+audio {
+  flex: 1;
+  height: 40px;
+  border-radius: 20px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #334155;
+  color: white;
+}
+
+.error-msg {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+.timeline-container {
+  flex: 1;
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.time-markers {
+  display: flex;
+  margin-bottom: 1.5rem;
+  padding-left: 7rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.marker {
+  position: relative;
+}
+
+.marker span {
+  position: absolute;
+  left: -0.5rem;
+}
+
+.grid-line {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 0;
+  left: 0;
+  border-left: 1px dashed rgba(255, 255, 255, 0.1);
+  height: 1000px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.track-row {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  position: relative;
+}
+
+.track-label {
+  width: 7rem;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  background: rgba(15, 17, 26, 0.8);
+  border-radius: 8px 0 0 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1.2rem;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.2);
+  z-index: 10;
+  position: sticky;
+  left: 0;
+}
+
+.track-content {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  background-color: var(--bg-track);
+  border: 1px solid rgba(255,255,255,0.02);
+  border-radius: 0 8px 8px 0;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.note-block {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255,255,255,0.2);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.note-block:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2);
+  z-index: 20;
+}

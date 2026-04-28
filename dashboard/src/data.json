@@ -1,0 +1,169 @@
+{
+  "duration": 2,
+  "effects": {
+    "global": [],
+    "per_track": {
+      "LEAD": [
+        "REVERB",
+        "DELAY"
+      ],
+      "PAD": [
+        "REVERB"
+      ]
+    }
+  },
+  "timeline": [
+    {
+      "second": 1,
+      "tracks": {
+        "DRUMS": [
+          {
+            "note": "KICK",
+            "start": 0.0,
+            "end": 0.1,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "KICK",
+            "start": 0.5,
+            "end": 0.6,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.0,
+            "end": 0.1,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.25,
+            "end": 0.35,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.5,
+            "end": 0.6,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.75,
+            "end": 0.85,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          }
+        ],
+        "BASS": [
+          {
+            "note": "C2",
+            "start": 0.0,
+            "end": 0.5,
+            "velocity": 90,
+            "instrument": "BASS"
+          }
+        ],
+        "LEAD": [
+          {
+            "note": "C5",
+            "start": 0.0,
+            "end": 0.5,
+            "velocity": 80,
+            "instrument": "LEAD"
+          }
+        ],
+        "PAD": [
+          {
+            "note": "E4",
+            "start": 0.0,
+            "end": 1.0,
+            "velocity": 70,
+            "instrument": "PAD"
+          }
+        ]
+      }
+    },
+    {
+      "second": 2,
+      "tracks": {
+        "DRUMS": [
+          {
+            "note": "KICK",
+            "start": 0.0,
+            "end": 0.1,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "KICK",
+            "start": 0.5,
+            "end": 0.6,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.0,
+            "end": 0.1,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.25,
+            "end": 0.35,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.5,
+            "end": 0.6,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          },
+          {
+            "note": "HAT",
+            "start": 0.75,
+            "end": 0.85,
+            "velocity": 64,
+            "instrument": "DRUMS"
+          }
+        ],
+        "BASS": [
+          {
+            "note": "C2",
+            "start": 0.0,
+            "end": 0.5,
+            "velocity": 90,
+            "instrument": "BASS"
+          }
+        ],
+        "LEAD": [
+          {
+            "note": "C5",
+            "start": 0.0,
+            "end": 0.5,
+            "velocity": 80,
+            "instrument": "LEAD"
+          }
+        ],
+        "PAD": [
+          {
+            "note": "E4",
+            "start": 0.0,
+            "end": 1.0,
+            "velocity": 70,
+            "instrument": "PAD"
+          }
+        ]
+      }
+    }
+  ]
+}

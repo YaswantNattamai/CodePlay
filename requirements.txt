@@ -1,0 +1,6 @@
+ply==3.11
+numpy
+scipy
+fastapi
+uvicorn
+python-multipart

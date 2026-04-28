@@ -1,0 +1,10 @@
+program → TEMPO NUMBER second_blocks
+
+second_block → SECOND NUMBER { piano_block }
+
+piano_block → PIANO : note_list
+
+note_list → note
+          | note , note_list
+
+note → NOTE [ FLOAT - FLOAT ]
