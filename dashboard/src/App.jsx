@@ -107,7 +107,7 @@ function App() {
   return (
     <div>
       <nav className="navbar">
-        <h1>OrchestraScript</h1>
+        <h1>CodePlay</h1>
         <div className="keyboard">
           {keyboardNotes.map(n => (
             <button 

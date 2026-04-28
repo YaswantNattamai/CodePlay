@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 style="border-bottom: none;">🎛️ OrchestraScript</h1>
+  <h1 style="border-bottom: none;">🎛️ CodePlay</h1>
   <p><strong>The Definitive EDM Engine & Browser-Based Music Compiler</strong></p>
 </div>
 
@@ -7,9 +7,9 @@
 
 ## 🌟 1. Project Philosophy & Overview
 
-**OrchestraScript** is a custom Domain-Specific Language (DSL) engineered for one purpose: enabling developers and musicians to write structured code that compiles directly into high-fidelity electronic music. 
+**CodePlay** is a custom Domain-Specific Language (DSL) engineered for one purpose: enabling developers and musicians to write structured code that compiles directly into high-fidelity electronic music. 
 
-Unlike traditional DAWs (Digital Audio Workstations) which rely on heavy graphical interfaces and piano rolls, OrchestraScript allows you to compose music using programming concepts: **Patterns**, **Variables**, **Loops**, and **Relative Timing**. 
+Unlike traditional DAWs (Digital Audio Workstations) which rely on heavy graphical interfaces and piano rolls, CodePlay allows you to compose music using programming concepts: **Patterns**, **Variables**, **Loops**, and **Relative Timing**. 
 
 The engine processes your code, parses the syntax into an Abstract Syntax Tree (AST), unrolls the logic via semantic analysis, synthesizes pure mathematical audio waves (Sine, Sawtooth, Noise), and pipes the result into a beautiful, reactive Web UI.
 
@@ -41,7 +41,7 @@ We engineered a full-stack compiler-to-audio-to-browser pipeline.
 
 ## 📂 3. Project Architecture & File Directory
 
-Every file in the OrchestraScript ecosystem has a distinct responsibility in the compilation pipeline.
+Every file in the CodePlay ecosystem has a distinct responsibility in the compilation pipeline.
 
 | File Name | Responsibility |
 | :--- | :--- |
@@ -57,7 +57,7 @@ Every file in the OrchestraScript ecosystem has a distinct responsibility in the
 
 ## 🧬 4. How PLY is Implemented
 
-OrchestraScript relies on the `ply.lex` and `ply.yacc` modules to understand human text.
+CodePlay relies on the `ply.lex` and `ply.yacc` modules to understand human text.
 
 ### The Lexer (`lexer.py`)
 The lexer uses Regular Expressions (Regex) to scan the text and yield tokens.
@@ -83,7 +83,7 @@ It reads tokens and builds a nested Python Dictionary (the AST) that looks like:
 ## 🎹 5. Language Syntax & How To Write It
 
 ### The `SECOND` Grid
-Every action in OrchestraScript happens within a `SECOND` block. By default, 1 Second represents 1.0 units of time.
+Every action in CodePlay happens within a `SECOND` block. By default, 1 Second represents 1.0 units of time.
 ```text
 SECOND 1 {
     LEAD: C5 [0.0-0.5] @80
@@ -133,7 +133,7 @@ Append `REVERB` or `DELAY` at the end of a track line to tag the IR with effect 
 
 ## 🔊 6. The Audio Engine Internals
 
-Because standard MIDI sounds like an acoustic piano and lacks EDM energy, OrchestraScript ships with a custom NumPy synthesizer (`gen_audio.py`).
+Because standard MIDI sounds like an acoustic piano and lacks EDM energy, CodePlay ships with a custom NumPy synthesizer (`gen_audio.py`).
 
 ### Wave Generation
 - **BASS**: Uses a raw Sawtooth wave `2 * (t * freq - floor(...))` for aggressive, buzzy low-end.

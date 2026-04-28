@@ -1,6 +1,6 @@
-# OrchestraScript 🎛️
+# CodePlay 🎛️
 
-**OrchestraScript** is a custom Domain-Specific Language (DSL) and web-based IDE engineered for writing structured code that compiles directly into high-fidelity electronic music.
+**CodePlay** is a custom Domain-Specific Language (DSL) and web-based IDE engineered for writing structured code that compiles directly into high-fidelity electronic music.
 
 Instead of a traditional DAW piano roll, compose your music using programming concepts like **Patterns**, **Loops**, and **Relative Timestamps**. The engine parses your code, synthesizes raw mathematical audio waves (Sine, Sawtooth, White Noise) using Python, and renders a visual timeline in a beautiful React dashboard.
 
@@ -19,8 +19,8 @@ Instead of a traditional DAW piano roll, compose your music using programming co
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/OrchestraScript.git
-   cd OrchestraScript
+   git clone https://github.com/yourusername/CodePlay.git
+   cd CodePlay
    ```
 
 2. **Set up the Python Backend**
@@ -54,7 +54,7 @@ npm run dev
 ```
 *Starts the Vite React app on http://localhost:5173*
 
-Open your browser, type some OrchestraScript, and hit **Compile & Render**!
+Open your browser, type some CodePlay, and hit **Compile & Render**!
 
 ## 📖 Documentation & Examples
 - Check out [documentation.md](documentation.md) for a deep dive into the language syntax and compiler architecture.
