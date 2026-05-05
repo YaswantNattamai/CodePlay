@@ -159,7 +159,7 @@ def p_note(p):
     elif len(p) == 4:
         p[0] = {"note": p[1], "every": p[3], "velocity": 64}
     elif len(p) == 6:
-        p[0] = {"note": p[1], "every": p[3], "velocity": p[6]}
+        p[0] = {"note": p[1], "every": p[3], "velocity": p[5]}
 
 def p_drum(p):
     '''drum : DRUM_NOTE LBRACKET FLOAT DASH FLOAT RBRACKET
@@ -173,7 +173,7 @@ def p_drum(p):
     elif len(p) == 4:
         p[0] = {"note": p[1], "every": p[3], "velocity": 64}
     elif len(p) == 6:
-        p[0] = {"note": p[1], "every": p[3], "velocity": p[6]}
+        p[0] = {"note": p[1], "every": p[3], "velocity": p[5]}
 
 def p_empty(p):
     'empty :'

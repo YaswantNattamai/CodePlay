@@ -1,0 +1,27 @@
+PATTERN chip_drums {
+    DRUMS: KICK [0.0-0.1] @90, SNARE [0.5-0.6] @80
+}
+
+PATTERN bass_line {
+    BASS: C2 [0.0-0.5] @80, G1 [0.5-1.0] @80
+}
+
+LOOP 10 {
+    SECOND 1 {
+        USE chip_drums
+        USE bass_line
+
+        DRUMS: HAT every 0.25 @50
+
+        LEAD: C5 [0.0-0.2] @80, E5 [0.5-0.7] @80
+    }
+
+    SECOND 2 {
+        USE chip_drums
+
+        DRUMS: HAT every 0.25 @50
+
+        BASS: A1 [0.0-0.5] @80, E2 [0.5-1.0] @80
+        LEAD: A4 [0.0-0.2] @80, C5 [0.5-0.7] @80
+    }
+}
